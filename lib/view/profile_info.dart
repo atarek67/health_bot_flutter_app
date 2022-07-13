@@ -46,17 +46,17 @@ class _Show_user_info extends StatelessWidget{
 
       child: ListView(
         children: [
+          _show_Text(_user_details_model.dailyCalorise!.toString(),"Daily Calories To Maintenance"),
           _show_Text(_user_details_model.currentWeight!.toString(),"Current Weight"),
           _show_Text(_user_details_model.birthDate!,"BirthDate"),
           _show_Text(_user_details_model.long!.toString(),"Height"),
           _show_Text(_user_details_model.sex!,"Sex"),
           _show_Text(_user_details_model.goalWeight!.toString(),"Goal Weight"),
-          _show_Text(_user_details_model.dailyCalorise!.toString(),"Daily Calories"),
           _show_Text(_user_details_model.doNaturalPlanBefore.toString(),"Do You Have Natural Plan Before ? "),
-          _show_Text(_user_details_model.haveChronicDisease.toString(),"Do You Have Chronic Disease ? "),
+          _show_Text(_user_details_model.haveChronicDisease.toString(),"Do You Have Any Disease ? "),
           const SizedBox(height: 30,),
-          _user_details_model.haveChronicDisease?const Text('Chronic Disease',
-            style: TextStyle(color: Color.fromARGB(255, 17, 138, 51),fontSize: 20,fontWeight: FontWeight.bold),):Container(),
+          _user_details_model.haveChronicDisease? Text('Diseases',
+            style: TextStyle(color: HexColor('#1A4314'),fontSize: 20,fontWeight: FontWeight.bold),):Container(),
           _user_details_model.haveChronicDisease?Padding(padding: const EdgeInsets.all(20),
              child: SizedBox(
                height: 100,
@@ -83,7 +83,7 @@ class _Show_user_info extends StatelessWidget{
     return ListTile(
       title:Padding(
         padding: const EdgeInsets.only(bottom: 10),
-        child: Text(text,style: const TextStyle(color:Color.fromARGB(255, 17, 138, 51),fontSize: 20,fontWeight: FontWeight.bold),),
+        child: Text(text,style: TextStyle(color:HexColor('#1A4314'),fontSize: 20,fontWeight: FontWeight.bold),),
       ) ,
       subtitle:Text(title,style: const TextStyle(color:Color.fromARGB(255, 17, 138, 51),fontSize: 20),) ,
     );
@@ -92,7 +92,7 @@ class _Show_user_info extends StatelessWidget{
   Widget _disease_Text(String title, String text){
     //return Text(text,style: TextStyle(color:Color(0xff005194),),);
     return ListTile(
-      title:Text(text,style: const TextStyle(color:Color.fromARGB(255, 17, 138, 51),fontSize: 20,fontWeight: FontWeight.bold),) ,
+      title:Text(text,style:  TextStyle(color:HexColor('#2E2E2E'),fontSize: 20,fontWeight: FontWeight.bold),) ,
       trailing:Text(title,style: const TextStyle(color:Color.fromARGB(255, 17, 138, 51),fontSize: 20),) ,
     );
   }

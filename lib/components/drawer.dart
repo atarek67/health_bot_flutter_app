@@ -11,6 +11,7 @@ import '../bloc/macro_disease_calculator/macro_calculator_bloc.dart';
 import '../bloc/workout_plan/workout_bloc.dart';
 import '../view/macro_calculator.dart';
 import '../view/profile_info.dart';
+import '../view/signin.dart';
 
 class drawer extends StatelessWidget{
 
@@ -46,7 +47,7 @@ class drawer extends StatelessWidget{
             Navigator.push(context, MaterialPageRoute(builder:(context)=>Work_out()));
           }),
           const SizedBox(height: 25,),
-          _drawe_button('Disease Instructions', () {
+          _drawe_button('Disease Information', () {
             BlocProvider<MacroCalculatorBloc>(
               create: (_) => MacroCalculatorBloc(),
             );
@@ -65,6 +66,13 @@ class drawer extends StatelessWidget{
               create: (_) => ChatbootBloc(),
             );
             Navigator.push(context, MaterialPageRoute(builder:(context)=>Chatboot()));
+          }),
+          const SizedBox(height: 25,),
+          _drawe_button('Sign Out', () {
+            BlocProvider<ChatbootBloc>(
+              create: (_) => ChatbootBloc(),
+            );
+            Navigator.push(context, MaterialPageRoute(builder:(context)=>Signin()));
           }),
         ],
       ) ,

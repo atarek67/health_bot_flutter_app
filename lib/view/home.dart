@@ -50,7 +50,7 @@ class Home extends StatelessWidget{
               Daily_history(history_bloc, false),
 
               const SizedBox(height: 30,),
-              const Text("Tip",style: TextStyle(
+              const Text("Quotes & Tips",style: TextStyle(
                   color:Color.fromARGB(255, 36, 110, 36),
                   fontWeight: FontWeight.bold,fontSize: 20
               ),),
@@ -113,7 +113,7 @@ class Home extends StatelessWidget{
   show_dialog(){
     showDialog(context: Context, builder: (context){
       return AlertDialog(
-        title: const Text('Add Your Day Exercise',style: TextStyle(
+        title: const Text('Add Your Daily Exercise',style: TextStyle(
             color:Color.fromARGB(255, 17, 138, 51),
             fontWeight: FontWeight.bold,fontSize: 20
         ),),

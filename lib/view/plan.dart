@@ -7,9 +7,6 @@ import 'package:natural/repository/workout_plan_repo.dart';
 import '../bloc/signup_bloc/signup_bloc.dart';
 import '../components/plan/draw_plan.dart';
 
-
-
-
 class Plan extends StatelessWidget{
 
   late WorkoutBloc plan_bloc;
@@ -35,7 +32,7 @@ class Plan extends StatelessWidget{
     return Scaffold(
       backgroundColor: HexColor('#EFEEE9'),
       appBar: AppBar(
-        title: Text(need_specific_plan?'Plan For $specific_plan Calories':'Your Daily Mail'),
+        title: Text(need_specific_plan?'Plan For $specific_plan Calories':'Your Daily Meal'),
       ),
        body: Column(
          children: [

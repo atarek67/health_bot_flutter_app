@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
@@ -61,7 +61,7 @@ class Fat_disease_history extends StatelessWidget {
                         show_snackbar(state.error);
                       }
             },
-            child:Button("Confirm", Color.fromARGB(255, 3, 118, 77), Colors.white,confirm_fat_history),
+            child:Button("Confirm", const Color.fromARGB(255, 3, 118, 77), Colors.white,confirm_fat_history),
             )
           ],
         ),
@@ -93,7 +93,7 @@ class Fat_disease_history extends StatelessWidget {
 
 class _List_view extends StatelessWidget{
 
-  List<String> list = ['disease name 1','disease name 2','disease name 3','disease name 4'];
+  List<String> list = ['Anxiety','Diabetes','Depression','Endometriosis'];
   SignupBloc bloc;
   _List_view(this.bloc);
 
@@ -104,7 +104,7 @@ class _List_view extends StatelessWidget{
         height: 250,
         child: ListView.builder(
             itemCount:list.length ,
-            itemBuilder: (contex,index){
+            itemBuilder: (context,index){
               return Check_box(list[index],
                   (check){
                      if(check==false){

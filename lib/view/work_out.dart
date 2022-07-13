@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -84,9 +86,10 @@ class _List_view extends StatelessWidget{
      // width: 250,
       child: ListTile(
         title: Text(bloc.exercise_list[index].exerciseName!,style: const TextStyle(
-          color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold),),
-        subtitle: Text(bloc.exercise_list[index].description!,style: const TextStyle(
-          color: Colors.white38),),
+          color: Colors.white,fontSize: 21,fontWeight: FontWeight.bold,),),
+
+        subtitle: Text(bloc.exercise_list[index].description!,maxLines: 3,overflow: TextOverflow.ellipsis ,style: const TextStyle(
+          color: Colors.white70),),
         onTap: () async {
           await launchUrl(
             Uri.parse(bloc.exercise_list[index].youtubeLink!),
@@ -97,7 +100,7 @@ class _List_view extends StatelessWidget{
           height: 100,
           width: 100,
           decoration: BoxDecoration(
-              image: DecorationImage(image: NetworkImage(bloc.exercise_list[index].imageLink!))
+              image: DecorationImage(image: NetworkImage(bloc.exercise_list[index].imageLink!),fit: BoxFit.contain)
           ),
         ),
       ),

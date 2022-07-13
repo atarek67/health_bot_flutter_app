@@ -17,7 +17,7 @@ class Question_buttons extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 220,
       child: Column(
         children: [
@@ -27,7 +27,6 @@ class Question_buttons extends StatelessWidget{
           Button(question2, HexColor('#94C973'), Colors.black, function2),
           const SizedBox(height: 10),
           Button(question3, HexColor('#94C973'), Colors.black, function3),
-          //#94C973
         ],
       ),
     );

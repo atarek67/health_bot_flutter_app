@@ -51,7 +51,7 @@ class Chatboot extends StatelessWidget{
             if(state is ChatbootInitial){
               return Question_buttons(' I Want To Know The Calories Of Something ',
                   ' I Want To Know About The Available Programs ',
-                  ' Feeling ',
+                  ' How I feel right now ',
                   i_want_know_calorise_something,
                   I_Want_Know_Available_rograms,
                   feeling);
@@ -59,7 +59,7 @@ class Chatboot extends StatelessWidget{
               return Question_buttons(' Happy ', ' Sad ', ' Lazy ',
                   happy, sad, lazy);
             }else if(state is ProgramsState){
-              return Question_buttons(' Low ', ' Medium ', ' Height ',
+              return Question_buttons(' To Lose Weight ', ' To Maintenance ', ' To Gain Weight ',
                   low, medium, hard);
             }
             return Container();

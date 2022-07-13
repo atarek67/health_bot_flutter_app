@@ -25,7 +25,7 @@ class AllDisease extends StatelessWidget {
           BlocBuilder<MacroCalculatorBloc, MacroCalculatorState>(
             builder: (context, state) {
               if(state is LoadingMacrostate){
-                return Center(child: CircularProgressIndicator(color: Color.fromARGB(255, 3, 118, 77),),);
+                return const Center(child: CircularProgressIndicator(color: Color.fromARGB(255, 17, 138, 51),),);
               }else if(state is FetchedMacroState){
                 return _List_view(bloc);
               }else
@@ -64,7 +64,7 @@ class _List_view extends StatelessWidget{
             itemCount:bloc.disease.length ,
             itemBuilder: (contex,index){
               return Card(
-                  color:const Color.fromARGB(255,3,118,77) ,
+                  color:const Color.fromARGB(255, 17, 138, 51) ,
                   shadowColor: Colors.black,
                   margin: EdgeInsets.all(10),
                   shape:RoundedRectangleBorder(

@@ -20,7 +20,7 @@ class Disease_info extends StatelessWidget{
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
           child: Center(child: Text(model.description!,
-          style: TextStyle(color: const Color.fromARGB(198,3,98,77), fontSize: 20,),
+          style: const TextStyle(color: Colors.black87, fontSize: 20,fontWeight: FontWeight.w700),
           ),),
         ),
       ),
