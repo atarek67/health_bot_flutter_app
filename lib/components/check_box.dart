@@ -25,8 +25,10 @@ class _Check_box extends State<Check_box>{
   @override
   Widget build(BuildContext context) {
     return CheckboxListTile(
+      checkColor: Colors.white,
+      selectedTileColor: Colors.blue,
       controlAffinity: ListTileControlAffinity.leading,
-      title: Text(title),
+      title: Text(title,style:const TextStyle(color: Colors.grey),),
       value: checked,
       activeColor:const Color.fromARGB(255, 17, 138, 51) ,
       onChanged: (value) {

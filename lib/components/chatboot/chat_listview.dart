@@ -7,15 +7,17 @@ class Listview extends StatelessWidget{
 
   ChatbootBloc bloc;
   late ScrollController scrollController;
-  Listview(this.bloc);
+  Listview(this.bloc, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
 
-    scrollController = ScrollController(initialScrollOffset: 0.0, keepScrollOffset: true);
+    scrollController = ScrollController(initialScrollOffset: 10.0, keepScrollOffset: true);
 
     return Container(
-      height: MediaQuery.of(context).size.height-220,
+      height: MediaQuery.of(context).size.height-280,
+
+
       child: ListView.builder(
         controller:scrollController,
           reverse: true,

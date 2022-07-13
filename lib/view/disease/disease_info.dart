@@ -12,7 +12,7 @@ class Disease_info extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: HexColor('#242526'),
+      backgroundColor: HexColor('#EFEEE9'),
       appBar: AppBar(
         title: Text(model.name!),
       ),
@@ -20,7 +20,7 @@ class Disease_info extends StatelessWidget{
         padding: const EdgeInsets.all(10),
         child: SingleChildScrollView(
           child: Center(child: Text(model.description!,
-          style: TextStyle(color: const Color.fromARGB(255,3,118,77), fontSize: 20,),
+          style: TextStyle(color: const Color.fromARGB(198,3,98,77), fontSize: 20,),
           ),),
         ),
       ),

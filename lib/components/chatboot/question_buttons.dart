@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hex_color/flutter_hex_color.dart';
 import 'package:natural/components/button.dart';
 
 
@@ -21,11 +22,12 @@ class Question_buttons extends StatelessWidget{
       child: Column(
         children: [
           const SizedBox(height: 10),
-          Button(question1, Color.fromARGB(255,247,219,180), Colors.black, function1),
+          Button(question1, HexColor('#94C973'), Colors.black, function1),
           const SizedBox(height: 10),
-          Button(question2, Color.fromARGB(255,247,219,180), Colors.black, function2),
+          Button(question2, HexColor('#94C973'), Colors.black, function2),
           const SizedBox(height: 10),
-          Button(question3, Color.fromARGB(255,247,219,180), Colors.black, function3),
+          Button(question3, HexColor('#94C973'), Colors.black, function3),
+          //#94C973
         ],
       ),
     );

@@ -20,7 +20,7 @@ class Macro_calculator extends StatelessWidget{
     Context = context;
 
     return Scaffold(
-      backgroundColor: HexColor('#242526'),
+      backgroundColor: HexColor('#EFEEE9'),
      body:Column(
        children: [
          const SizedBox(height: 20,),
@@ -65,11 +65,11 @@ class _List_view extends StatelessWidget{
     return Expanded(
         child: ListView.builder(
             itemCount:bloc.search_macro_list.length ,
-            itemBuilder: (contex,index){
+            itemBuilder: (context,index){
               return Card(
                   color:const Color.fromARGB(255, 17, 138, 51),
                   shadowColor: Colors.white,
-                  margin: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.all(8),
                   shape:RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ) ,
@@ -85,7 +85,7 @@ class _List_view extends StatelessWidget{
         children: [
           Text(bloc.search_macro_list[index].foodName!,style:const TextStyle(
               color:Colors.white,
-              fontWeight: FontWeight.bold,fontSize: 20
+              fontWeight: FontWeight.bold,fontSize: 16
           ),),
 
           Row(
@@ -94,11 +94,11 @@ class _List_view extends StatelessWidget{
                 children: [
                   const Text('Calories',style: TextStyle(
                       color:Colors.white,
-                      fontWeight: FontWeight.bold,fontSize: 16
+                      fontWeight: FontWeight.bold,fontSize: 14
                   )),
                   Text(bloc.search_macro_list[index].calories!,style: const TextStyle(
                       color:Colors.white,
-                      fontWeight: FontWeight.bold,fontSize: 16
+                      fontWeight: FontWeight.bold,fontSize: 14
                   ))
                 ],
               ),
@@ -107,11 +107,11 @@ class _List_view extends StatelessWidget{
                 children: [
                   const Text('Fat',style: TextStyle(
                       color:Colors.white,
-                      fontWeight: FontWeight.bold,fontSize: 16
+                      fontWeight: FontWeight.bold,fontSize: 14
                   )),
                   Text(bloc.search_macro_list[index].fat!,style: const TextStyle(
                       color:Colors.white,
-                      fontWeight: FontWeight.bold,fontSize: 16
+                      fontWeight: FontWeight.bold,fontSize: 14
                   ))
                 ],
               ),
@@ -120,11 +120,11 @@ class _List_view extends StatelessWidget{
                 children: [
                   const Text('Protein',style: TextStyle(
                       color:Colors.white,
-                      fontWeight: FontWeight.bold,fontSize: 16
+                      fontWeight: FontWeight.bold,fontSize: 14
                   )),
                   Text(bloc.search_macro_list[index].protein!,style: const TextStyle(
                       color:Colors.white,
-                      fontWeight: FontWeight.bold,fontSize: 16
+                      fontWeight: FontWeight.bold,fontSize: 14
                   ))
                 ],
               ),
@@ -145,15 +145,15 @@ class _textFiled extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10),
+      padding:  EdgeInsets.all(25),
       child: TextFormField(
         decoration: const InputDecoration(
-            contentPadding: EdgeInsets.only(left: 15),
+            contentPadding: EdgeInsets.only(right:0 ),
           hintText: 'Search...',
           hintStyle: TextStyle(
-            color: Colors.white70
+            color: Color.fromARGB(255, 17, 138, 51)
           ),
-          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color:Color.fromARGB(255, 17, 138, 51),width: 2),
+          focusedBorder: OutlineInputBorder(borderSide: BorderSide(color:Color.fromARGB(255, 17, 138, 51),width: 0),
               borderRadius: BorderRadius.all(Radius.circular(20))),
           enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white,width: 2),
               borderRadius: BorderRadius.all(Radius.circular(20))),
@@ -161,7 +161,7 @@ class _textFiled extends StatelessWidget{
         ),
         cursorColor: const Color.fromARGB(255, 17, 138, 51),
         controller: bloc.search_text,
-        style: const TextStyle(fontSize: 20,color: Color.fromARGB(255, 17, 138, 51)) ,
+        style: const TextStyle(fontSize: 13,color: Color.fromARGB(255, 17, 138, 51)) ,
         onChanged: (val){
           bloc.add(SearchEvent(val));
         },

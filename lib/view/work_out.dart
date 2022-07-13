@@ -23,7 +23,7 @@ class Work_out extends StatelessWidget{
     Context = context;
 
     return Scaffold(
-      backgroundColor: HexColor('#242526'),
+      backgroundColor: HexColor('#EFEEE9'),
       body: Column(
         children: [
           BlocBuilder<WorkoutBloc,WorkoutState>(
@@ -71,7 +71,7 @@ class _List_view extends StatelessWidget{
               return Card(
                   color:const Color.fromARGB(255, 17, 138, 51) ,
                   shadowColor: Colors.black,
-                  margin:const EdgeInsets.all(10),
+                  margin:const EdgeInsets.all(5),
                   shape:RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15.0),
                   ) ,

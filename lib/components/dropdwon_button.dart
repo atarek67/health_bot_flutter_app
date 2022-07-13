@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
 
@@ -13,7 +14,9 @@ class Dropdwon_button extends StatefulWidget{
     return _button;
   }
   String selected (){
-    print(_button.select!);
+    if (kDebugMode) {
+      print(_button.select);
+    }
     return _button.select!;
   }
 }
@@ -25,7 +28,7 @@ class _Dropdwon_button extends State<Dropdwon_button>{
   @override
   Widget build(BuildContext context) {
     return DropdownButton(
-      dropdownColor: HexColor('#242526'),
+      dropdownColor: HexColor('#EFEEE9'),
       items: ['male','female'].map((val)=>
           DropdownMenuItem(child:Text(val),value: val,)).toList(),
       hint: const Text('Sex',style: TextStyle(color:Colors.grey),textAlign: TextAlign.center,) ,

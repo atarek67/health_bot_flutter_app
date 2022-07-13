@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_hex_color/flutter_hex_color.dart';
 import 'package:natural/components/button.dart';
 import 'package:natural/components/dropdwon_button.dart';
 import 'package:natural/components/text_filled.dart';
@@ -26,7 +27,7 @@ class Personal_info extends StatelessWidget {
     Context = context;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: HexColor('#EFEEE9'),
       appBar: AppBar(
         title: const Text('Personal Information'),
       ),

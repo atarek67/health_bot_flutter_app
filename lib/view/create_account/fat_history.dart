@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_hex_color/flutter_hex_color.dart';
 import 'package:natural/components/check_box.dart';
 import 'package:natural/components/text_filled.dart';
 import 'package:natural/view/create_account/signup.dart';
@@ -20,7 +21,7 @@ class Fat_disease_history extends StatelessWidget {
     Context = context;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: HexColor('#EFEEE9'),
       appBar: AppBar(
         title: const Text('Obesity Medical History'),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_hex_color/flutter_hex_color.dart';
 import 'package:natural/bloc/signup_bloc/signup_bloc.dart';
 import 'package:natural/view/create_account/personal_info.dart';
 import 'package:natural/view/home.dart';
@@ -21,7 +22,7 @@ class Signin extends StatelessWidget{
     Context = context;
 
     return Scaffold(
-      backgroundColor: color,
+      backgroundColor: HexColor('#EFEEE9'),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(bottom: 0),

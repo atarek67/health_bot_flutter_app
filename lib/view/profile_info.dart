@@ -18,7 +18,7 @@ class Profile_info extends StatelessWidget{
     bloc = BlocProvider.of<SignupBloc>(context);
 
     return Scaffold(
-        backgroundColor: HexColor('#242526'),
+        backgroundColor: HexColor('#EFEEE9'),
       body:SizedBox(
         height:MediaQuery.of(context).size.height,
         child: Column(

@@ -12,7 +12,8 @@ import 'bloc/workout_plan/workout_bloc.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
@@ -39,17 +40,18 @@ class MyApp extends StatelessWidget {
           ),
         ],
         child: MaterialApp(
-        theme: ThemeData(
-
-          colorScheme: ThemeData().colorScheme.copyWith(primary: const Color.fromARGB(255, 17, 138, 51)),
-          primaryColor: const Color.fromARGB(255, 17, 138, 51),
-          backgroundColor: const Color.fromARGB(255, 17, 138, 51),
-          appBarTheme: const AppBarTheme(
-            backgroundColor: Color.fromARGB(255, 17, 138, 51),
-          )
+          theme: ThemeData(
+              colorScheme: ThemeData().colorScheme.copyWith(primary: const Color.fromARGB(255, 17, 138, 51)),
+              primaryColor: const Color.fromARGB(255, 17, 138, 51),
+              backgroundColor: const Color.fromARGB(255, 17, 138, 51),
+              appBarTheme: const AppBarTheme(
+                backgroundColor: Color.fromARGB(255, 17, 138, 51),
+              )
+          ),
+          debugShowCheckedModeBanner: false,
+          home: CustomAnimatedSplash(Signin()),
         ),
-        debugShowCheckedModeBanner: false,
-        home: CustomAnimatedSplash(Signin()),
-        ));
+    );
   }
 }
+

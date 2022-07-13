@@ -33,7 +33,7 @@ class Chatboot extends StatelessWidget{
     Context = context;
 
     return Scaffold(
-      backgroundColor: HexColor('#242526'),
+      backgroundColor: HexColor('#EFEEE9'),
       body: Column(
         children: [
           BlocBuilder<ChatbootBloc,ChatbootState>(

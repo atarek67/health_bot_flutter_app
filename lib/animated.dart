@@ -1,5 +1,6 @@
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hex_color/flutter_hex_color.dart';
 
 import 'components/constants/constants.dart';
 
@@ -16,7 +17,7 @@ class CustomAnimatedSplash extends StatelessWidget {
         splashIconSize: 200,
         duration: 2500,
         centered: true,
-        backgroundColor: color,
+        backgroundColor: HexColor('#EFEEE9'),
         nextScreen: nextWidget
     );
   }

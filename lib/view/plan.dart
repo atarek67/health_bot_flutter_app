@@ -33,7 +33,7 @@ class Plan extends StatelessWidget{
     }
     Context = context;
     return Scaffold(
-      backgroundColor: HexColor('#242526'),
+      backgroundColor: HexColor('#EFEEE9'),
       appBar: AppBar(
         title: Text(need_specific_plan?'Plan For $specific_plan Calories':'Your Daily Mail'),
       ),

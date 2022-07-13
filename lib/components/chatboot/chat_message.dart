@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hex_color/flutter_hex_color.dart';
 
 class ChatMessage extends StatelessWidget{
 
@@ -9,7 +10,7 @@ class ChatMessage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
       return Container(
-        padding: EdgeInsets.only(left: 14,right: 14,top: 10,bottom: 10),
+        padding: const EdgeInsets.only(left: 14,right: 14,top: 8,bottom: 7),
         child: Align(
           alignment: (messageFromRopot?Alignment.topLeft:Alignment.topRight),
           child:
@@ -20,10 +21,10 @@ class ChatMessage extends StatelessWidget{
                 bottomLeft:  Radius.circular(5),
                 bottomRight:  Radius.circular(5),
               ),
-              color: messageFromRopot? (Colors.black45):const Color.fromARGB(255, 17, 138, 51),
+              color: messageFromRopot? HexColor('#595E60'):const Color.fromARGB(255, 17, 138, 51),
             ),
-            padding: EdgeInsets.all(16),
-            child: Text(message, style: TextStyle(fontSize: 15,color: Colors.white)),)
+            padding: const EdgeInsets.all(10),
+            child: Text(message, style: const TextStyle(fontSize: 17,color: Colors.white)),)
           ),
         );
 

@@ -20,7 +20,7 @@ class drawer extends StatelessWidget{
   Widget build(BuildContext context) {
 
     return Drawer(
-       backgroundColor: HexColor('#242526'),
+      backgroundColor: HexColor('#EFEEE9'),
       child:ListView(
         children: [
         const DrawerHeader(
@@ -65,7 +65,7 @@ class drawer extends StatelessWidget{
               create: (_) => ChatbootBloc(),
             );
             Navigator.push(context, MaterialPageRoute(builder:(context)=>Chatboot()));
-          })
+          }),
         ],
       ) ,
     );
@@ -85,7 +85,7 @@ class _drawe_button extends StatelessWidget{
     return Container(
       margin: const EdgeInsets.only(left: 30),
       child: GestureDetector(
-        child: Text(title,style: const TextStyle(color: Colors.white70,fontWeight: FontWeight.bold,fontSize: 18),),
+        child: Text(title,style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),),
         onTap: function,
       ),
     );

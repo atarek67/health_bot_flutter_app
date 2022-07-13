@@ -23,12 +23,13 @@ class Home extends StatelessWidget{
     Context = context;
 
     return Scaffold(
-    backgroundColor: HexColor('#242526'),
+      backgroundColor: HexColor('#EFEEE9'),
        drawer: Drawer(
-         backgroundColor: HexColor('#242526'),
+         backgroundColor: HexColor('#EFEEE9'),
          child: drawer(),
        ),
        appBar: AppBar(
+         //backgroundColor: ,
          title: const Text('Daily Tasks'),
          actions: [
            IconButton(

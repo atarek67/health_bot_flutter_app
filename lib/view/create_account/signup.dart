@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_hex_color/flutter_hex_color.dart';
 import 'package:natural/bloc/signup_bloc/signup_bloc.dart';
 
 import '../../components/button.dart';
@@ -23,7 +24,7 @@ class Signup extends StatelessWidget{
     Context = context;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: HexColor('#EFEEE9'),
       body: SingleChildScrollView(
         child: Column(
           children: [
