@@ -121,7 +121,7 @@ class _List_view extends StatelessWidget{
                   const Text('Protein',style: TextStyle(
                       color:Colors.white,
                       fontWeight: FontWeight.bold,fontSize: 14
-                  )),
+                  ),),
                   Text(bloc.search_macro_list[index].protein!,style: const TextStyle(
                       color:Colors.white,
                       fontWeight: FontWeight.bold,fontSize: 14

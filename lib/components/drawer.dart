@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
+import 'package:natural/components/constants/constants.dart';
 import 'package:natural/view/chatboot.dart';
 import 'package:natural/view/disease/all_disease.dart';
 import 'package:natural/view/plan.dart';
@@ -68,7 +69,7 @@ class drawer extends StatelessWidget{
             Navigator.push(context, MaterialPageRoute(builder:(context)=>Chatboot()));
           }),
           const SizedBox(height: 25,),
-          _drawe_button('Sign Out', () {
+          _drawe_button('Sign Out',() {
             BlocProvider<ChatbootBloc>(
               create: (_) => ChatbootBloc(),
             );

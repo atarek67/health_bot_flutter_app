@@ -44,7 +44,7 @@ class ChatbootBloc extends Bloc<ChatbootEvent, ChatbootState> {
 
   _onHappyEvent(HappyEvent event, Emitter<ChatbootState> emit){
     chatMessages.insert(0,Chatboot_model('Happy', false));
-    chatMessages.insert(0,Chatboot_model('quote......', true));
+    chatMessages.insert(0,Chatboot_model('When you feel like giving up, remember why you started......', true));
     chatMessages.insert(0,Chatboot_model('How Can I Help You ?', true));
     emit(Rebuild_messages_list_state());
 
@@ -52,7 +52,7 @@ class ChatbootBloc extends Bloc<ChatbootEvent, ChatbootState> {
 
   _onsadEvent(sadEvent event, Emitter<ChatbootState> emit){
     chatMessages.insert(0,Chatboot_model('Sad', false));
-    chatMessages.insert(0,Chatboot_model('eat some mango', true));
+    chatMessages.insert(0,Chatboot_model('You can eat chocolate as it has been proven that chocolate (dark chocolate especially) enhances the production of certain chemicals called endorphins. Endorphins act somewhat like a (feel-good) chemical that makes your brain euphoric, thus making you happy.', true));
     chatMessages.insert(0,Chatboot_model('How Can I Help You ?', true));
     emit(Rebuild_messages_list_state());
 
@@ -89,7 +89,5 @@ class ChatbootBloc extends Bloc<ChatbootEvent, ChatbootState> {
     chatMessages.insert(0,Chatboot_model('How Can I Help You ?', true));
     emit(Rebuild_messages_list_state());
   }
-
-
 
 }
