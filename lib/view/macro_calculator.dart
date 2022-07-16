@@ -21,7 +21,9 @@ class Macro_calculator extends StatelessWidget{
 
     return Scaffold(
       backgroundColor: HexColor('#EFEEE9'),
-     body:Column(
+     body:
+
+     Column(
        children: [
          const SizedBox(height: 20,),
          _textFiled(bloc),
@@ -64,6 +66,7 @@ class _List_view extends StatelessWidget{
   Widget build(BuildContext context) {
     return Expanded(
         child: ListView.builder(
+          physics: BouncingScrollPhysics(),
             itemCount:bloc.search_macro_list.length ,
             itemBuilder: (context,index){
               return Card(
@@ -151,13 +154,14 @@ class _textFiled extends StatelessWidget{
             contentPadding: EdgeInsets.only(right:0 ),
           hintText: 'Search...',
           hintStyle: TextStyle(
-            color: Color.fromARGB(255, 17, 138, 51)
+            color: Color.fromARGB(255, 17, 138, 51),
+            fontSize: 18.0,
           ),
           focusedBorder: OutlineInputBorder(borderSide: BorderSide(color:Color.fromARGB(255, 17, 138, 51),width: 0),
+              borderRadius: BorderRadius.all(Radius.circular(10))),
+          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.black,width: 2),
               borderRadius: BorderRadius.all(Radius.circular(20))),
-          enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white,width: 2),
-              borderRadius: BorderRadius.all(Radius.circular(20))),
-          prefixIcon: Icon(Icons.search,size: 20,),
+          prefixIcon: Icon(Icons.search,size: 20,color: Colors.black,),
         ),
         cursorColor: const Color.fromARGB(255, 17, 138, 51),
         controller: bloc.search_text,

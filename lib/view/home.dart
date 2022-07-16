@@ -38,6 +38,7 @@ class Home extends StatelessWidget{
          ],
        ),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Column(

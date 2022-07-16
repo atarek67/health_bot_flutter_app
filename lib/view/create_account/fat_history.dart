@@ -36,10 +36,10 @@ class Fat_disease_history extends StatelessWidget {
                   bloc.user_model.doNaturalPlanBefore =check;
                 }),
             const SizedBox(height: 30,),
-            Text_filled(bloc.goal_weight, 'Goal', false,keyboard_type: TextInputType.number,),
+            Text_filled(bloc.goal_weight, 'Weight Goal', false,keyboard_type: TextInputType.number,),
             const SizedBox(height: 20,),
             //have Chronic Disease
-            Check_box('Do You Have Any Chronic Disease ?',
+            Check_box('Do You Have Any Disease ?',
                     (check){
                   bloc.add(Show_ChronicDiseaseEvent(check));
                }),
@@ -93,7 +93,7 @@ class Fat_disease_history extends StatelessWidget {
 
 class _List_view extends StatelessWidget{
 
-  List<String> list = ['Anxiety','Diabetes','Depression','Endometriosis'];
+  List<String> list = ['Anxiety','Diabetes','Depression','Anemia'];
   SignupBloc bloc;
   _List_view(this.bloc);
 

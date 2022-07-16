@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
-import 'package:natural/components/constants/constants.dart';
+import 'package:natural/bmi_screem.dart';
 import 'package:natural/view/chatboot.dart';
 import 'package:natural/view/disease/all_disease.dart';
 import 'package:natural/view/plan.dart';
 import 'package:natural/view/work_out.dart';
-
 import '../bloc/chatboot/chatboot_bloc.dart';
 import '../bloc/macro_disease_calculator/macro_calculator_bloc.dart';
 import '../bloc/workout_plan/workout_bloc.dart';
@@ -69,6 +68,13 @@ class drawer extends StatelessWidget{
             Navigator.push(context, MaterialPageRoute(builder:(context)=>Chatboot()));
           }),
           const SizedBox(height: 25,),
+          _drawe_button('BMI', () {
+            BlocProvider<ChatbootBloc>(
+              create: (_) => ChatbootBloc(),
+            );
+            Navigator.push(context, MaterialPageRoute(builder:(context)=>BmiScreen()));
+          }),
+          const SizedBox(height: 25,),
           _drawe_button('Sign Out',() {
             BlocProvider<ChatbootBloc>(
               create: (_) => ChatbootBloc(),
@@ -94,6 +100,7 @@ class _drawe_button extends StatelessWidget{
     return Container(
       margin: const EdgeInsets.only(left: 30),
       child: GestureDetector(
+
         child: Text(title,style: const TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 18),),
         onTap: function,
       ),
